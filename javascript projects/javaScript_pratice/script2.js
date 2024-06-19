@@ -74,7 +74,11 @@ const person2 = new Object({firstname : "modi",
 // person2.lastname = "jii";
 // person2.age = 70;
 
+
 console.log(person2);
+
+
+
 
 //javascript objects methods
 
@@ -87,3 +91,53 @@ const person3 = {
 }
 
 person3.greet();
+
+//this keyword
+
+const person4 = {
+    firstname : "elon",
+    lastname : "musk",
+    // greet : function(){
+    //     console.log("hello "+ this.firstname);
+    // } 
+
+    getfullname : function()
+    {
+        return this.firstname+ " "+ this.lastname;
+    }
+    
+
+}
+console.log(person4.firstname);
+//person4.greet();
+console.log(person4.getfullname()); 
+
+console.log(this);
+
+
+//connstrucor function
+
+// const person5 = {
+//     firstname : "iron",
+//     lastname : "man"
+// }
+
+function person5(first ,last){
+    this.firstname =first,
+    this.lastname =last
+}
+
+const person6 = new person5("iron","man");
+const person7 = new person5("super","man");
+
+console.log(person6);
+console.log(person7);
+person6.age = 60;
+console.log(person6.age);
+
+person6.greet = function () {
+    console.log("hello, greatstack");
+
+}
+
+person6.greet();
