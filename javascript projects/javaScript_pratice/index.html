@@ -4,11 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
 </head>
 <body>
-    <script src="script4.js"> </script>
+    <!--
+    <script src="script1.js"></script>
+    <script src="script2.js"></script>
+    <script src="script3.js"></script>
+    <script src="script4.js"></script>
+    <script src="script5.js"></script>
+    <script src="script6.js"></script>
+    <script src="script7.js"></script>
+    -->
 
-    
+    <div>
+        <p id="message">javascript Dom</p>
+        <h1>mourya</h1>
+    </div>
+
+    <script> 
+       let msg = document.getElementById("message").innerHTML;
+       let headings = document.getElementsByTagName("h1");
+       console.log(msg); 
+       console.log(headings[0].innerHTML); // Log all <h1> elements
+       // Log the element with id="message"
+    </script> 
 </body>
 </html>
